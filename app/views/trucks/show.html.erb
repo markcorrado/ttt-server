@@ -1,0 +1,12 @@
+<p>
+  <strong>Title:</strong>
+  <%= @truck.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @truck.text %>
+</p>
+
+<%= link_to 'Back', trucks_path %>
+<%= link_to 'Edit', edit_truck_path(@truck) %>

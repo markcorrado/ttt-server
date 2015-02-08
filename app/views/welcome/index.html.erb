@@ -1,0 +1,9 @@
+<h1>Welcome to Trucks Trucks Trucks!</h1>
+<% if user_signed_in? %>
+    <div>
+      <%= link_to 'Trucks List', controller: 'trucks' %>
+    </div>
+    <div>
+      <%= link_to 'New Truck', new_truck_path %>
+    </div>
+<% end %>
