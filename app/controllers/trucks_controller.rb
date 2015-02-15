@@ -1,5 +1,6 @@
 class TrucksController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
+  before_action :authenticate_user!, :except => [:mobileshow]
 
   def index
     @trucks = Truck.all
@@ -7,6 +8,11 @@ class TrucksController < ApplicationController
 
   def show
     @truck = Truck.find(params[:id])
+  end
+
+  def mobileshow
+    @trucks = Truck.all
+    render json: @trucks
   end
 
   def new
