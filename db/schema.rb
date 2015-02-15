@@ -11,15 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150215194227) do
+ActiveRecord::Schema.define(version: 20150215203338) do
 
   create_table "trucks", force: true do |t|
     t.string   "title"
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "latitude"
-    t.string   "longitude"
+    t.float    "latitude",   limit: 255
+    t.float    "longitude",  limit: 255
+    t.string   "address"
   end
 
   create_table "users", force: true do |t|

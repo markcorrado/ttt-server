@@ -8,6 +8,16 @@
   <%= @truck.text %>
 </p>
 
+<p>
+  <strong>Latitude:</strong>
+  <%= @truck.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @truck.longitude %>
+</p>
+
 <%= link_to 'Back', trucks_path %>
 <%= link_to 'Trucks List', controller: 'trucks' %>
 <%= link_to 'Edit', edit_truck_path(@truck) %>
