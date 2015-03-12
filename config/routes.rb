@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
-  get 'welcome/index'
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
+             controllers: {omniauth_callbacks: "authentication", registrations: "registration"}
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -8,7 +9,7 @@ Rails.application.routes.draw do
   resources :trucks
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  root to: 'authentication#home'
 
   get 'mobileshow', to: 'trucks#mobileshow'
 

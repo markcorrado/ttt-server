@@ -1,0 +1,12 @@
+--- !map:HashWithIndifferentAccess
+development:
+  action_mailer:
+    default_url_options:
+      host: localhost:3000
+      protocol: http
+    smtp_settings:
+      address: localhost
+      port: 1025
+  twitter:
+    consumer_key: UTzDEvsz9w3W9tFbheOG5p6Dk
+    consumer_secret: hgTRXfqw0CHINMn6idlbvegCQUSKzbiHVg3Q6BSnfV9bqISeKL
